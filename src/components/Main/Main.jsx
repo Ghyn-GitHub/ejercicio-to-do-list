@@ -9,6 +9,10 @@ const Main = () => {
   const [taskTitle, setTaskTitle] = useState("");
   const [taskDesc, setTaskDesc] = useState("");
 
+  const deleteTask = (id) => {
+    setTareas(tareas.filter((task) => task.id !== id))
+  }
+
   return (
     <main>
       <input
@@ -54,7 +58,7 @@ const Main = () => {
         RESET
       </button>
 
-      <List tareas={tareas} />
+      <List tareas={tareas} deleteTask={deleteTask} />
     </main>
   );
 };

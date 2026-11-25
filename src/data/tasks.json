@@ -1,0 +1,5 @@
+[
+  {"id": "task1", "title": "Tarea 1", "description": "Lavar la ropa"},
+  {"id": "task2", "title": "Tarea 2", "description": "Limpiar la casa"},
+  {"id": "task3", "title": "Tarea 3", "description": "Preparar la comida"}
+]

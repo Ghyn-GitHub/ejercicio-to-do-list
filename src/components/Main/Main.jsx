@@ -15,48 +15,55 @@ const Main = () => {
 
   return (
     <main>
-      <input
-        onChange={(event) => setTaskTitle(event.target.value)}
-        value={taskTitle}
-        placeholder="Título de la tarea..."
-      />
+      <div className="task-form">
+        <input
+          onChange={(event) => setTaskTitle(event.target.value)}
+          value={taskTitle}
+          placeholder="Título de la tarea..."
+        />
 
-      <input
-        onChange={(event) => setTaskDesc(event.target.value)}
-        value={taskDesc}
-        placeholder="Descripción de la tarea..."
-      />
+        <input
+          onChange={(event) => setTaskDesc(event.target.value)}
+          value={taskDesc}
+          placeholder="Descripción de la tarea..."
+        />
 
-      <button
-        onClick={() => {
-          const newTask = {
-            id: uuidv4(),
-            title: taskTitle,
-            description: taskDesc,
-          };
-          setTareas([newTask, ...tareas]);
-          setTaskTitle("");
-          setTaskDesc("");
-        }}
-      >
-        ADD
-      </button>
+        <button
+          className="btn btn-primary"
+          onClick={() => {
+            const newTask = {
+              id: uuidv4(),
+              title: taskTitle,
+              description: taskDesc,
+            };
+            setTareas([newTask, ...tareas]);
+            setTaskTitle("");
+            setTaskDesc("");
+          }}
+        >
+          ADD
+        </button>
+      </div>
 
-      <button
-        onClick={() => {
-          setTareas([]);
-        }}
-      >
-        CLEAR
-      </button>
+      <div className="task-actions">
+        <button
+          className="btn btn-ghost"
+          onClick={() => {
+            setTareas([]);
+          }}
+        >
+          CLEAR
+        </button>
 
-      <button
-        onClick={() => {
-          setTareas(tareasIniciales);
-        }}
-      >
-        RESET
-      </button>
+        <button
+          className="btn btn-ghost"
+          onClick={() => {
+            setTareas(tareasIniciales);
+          }}
+        >
+          RESET
+        </button>
+      </div>
 
       <List tareas={tareas} deleteTask={deleteTask} />
     </main>

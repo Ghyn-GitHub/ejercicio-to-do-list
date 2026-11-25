@@ -1,0 +1,20 @@
+.list {
+  list-style: none; /* quita los puntos de la lista */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Si la lista no tiene ninguna tarea (por ejemplo, tras pulsar CLEAR),
+   :empty la detecta y mostramos un mensaje solo con CSS */
+.list:empty::after {
+  content: "No hay tareas. ¡Añade una o pulsa RESET! ✨";
+  display: block;
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--text-muted);
+  border: 2px dashed var(--border);
+  border-radius: var(--radius);
+}

@@ -1,5 +1,7 @@
+import "./Footer.css";
+
 const Footer = () => {
-  return <footer>Footer de prueba</footer>;
+  return <footer>To-Do List · Hecho con React · 2026</footer>;
 };
 
 export default Footer;

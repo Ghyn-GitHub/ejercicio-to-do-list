@@ -1,0 +1,17 @@
+header {
+  padding: 48px 0 24px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+
+  /* Texto con degradado */
+  background: linear-gradient(135deg, var(--accent), var(--danger));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

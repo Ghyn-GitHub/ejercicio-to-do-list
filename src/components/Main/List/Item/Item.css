@@ -1,0 +1,33 @@
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px;
+  background: var(--surface);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.item-content {
+  min-width: 0; /* permite que los textos largos se corten bien */
+}
+
+.item h4 {
+  margin: 0 0 4px;
+  font-size: 1.05rem;
+}
+
+.item p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  overflow-wrap: anywhere; /* evita que una palabra muy larga rompa la tarjeta */
+}

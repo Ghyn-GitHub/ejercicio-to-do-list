@@ -3,7 +3,7 @@ import Item from "./Item";
 
 const List = ({ tareas, deleteTask }) => {
   return (
-    <ul>
+    <ul className="list">
       {tareas.map((tarea) => <li key={tarea.id}><Item data={tarea} deleteTask={deleteTask} /></li>)}
     </ul>
   );

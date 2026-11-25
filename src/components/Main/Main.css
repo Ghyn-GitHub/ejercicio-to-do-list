@@ -1,0 +1,45 @@
+main {
+  flex: 1; /* ocupa el espacio libre para empujar el footer abajo */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ---------- Formulario ---------- */
+
+.task-form {
+  display: flex;
+  flex-wrap: wrap; /* en pantallas estrechas, los elementos bajan de línea */
+  gap: 12px;
+  padding: 20px;
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.task-form input {
+  flex: 1 1 200px; /* crecen para llenar el hueco, mínimo 200px */
+  padding: 10px 14px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.task-form input::placeholder {
+  color: var(--text-muted);
+}
+
+.task-form input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+/* ---------- Botones CLEAR y RESET ---------- */
+
+.task-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}

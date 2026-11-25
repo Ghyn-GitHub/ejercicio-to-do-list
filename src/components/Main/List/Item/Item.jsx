@@ -4,10 +4,14 @@ const Item = ({ data, deleteTask }) => {
   const { id, title, description } = data;
 
   return (
-    <article>
-      <h4>{title || "--"}</h4>
-      <p>{description || "--"}</p>
-      <button onClick={() => deleteTask(id)}>BORRAR</button>
+    <article className="item">
+      <div className="item-content">
+        <h4>{title || "--"}</h4>
+        <p>{description || "--"}</p>
+      </div>
+      <button className="btn btn-danger" onClick={() => deleteTask(id)}>
+        BORRAR
+      </button>
     </article>
   );
 };

@@ -1,8 +1,7 @@
 import "./List.css";
 import Item from "./Item";
-import tareas from "../../../data/tasks.json";
 
-const List = () => {
+const List = ({ tareas }) => {
   return (
     <ul>
       {tareas.map((tarea) => <li key={tarea.id}><Item data={tarea} /></li>)}

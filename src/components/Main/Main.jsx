@@ -8,6 +8,14 @@ const Main = () => {
 
   return (
     <main>
+      <button onClick={() => {
+        setTareas([])
+      }}>CLEAR</button> 
+
+      <button onClick={() => {
+        setTareas(tareasIniciales)
+      }}>RESET</button> 
+
       <List tareas={tareas} />
     </main>
   );
